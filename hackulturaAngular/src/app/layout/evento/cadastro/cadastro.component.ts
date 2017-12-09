@@ -1,14 +1,23 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { EventoService } from '../evento.service';
+import { EventoComponent } from 'app/layout/evento/evento.component';
 declare var $:any;
 
 @Component({
+  moduleId: module.id,
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.scss']
 })
 export class CadastroComponent implements OnInit {
 
-  constructor() { }
+  service: EventoService;
+  evento: EventoComponent = new EventoComponent();
+  mensagem: string;
+
+  constructor(service: EventoService) {
+    this.service = service;
+  }
 
   ngOnInit() {
   }
@@ -31,5 +40,31 @@ export class CadastroComponent implements OnInit {
 
       $('.modal').modal();
     });
+  }
+
+  cadastrar(event){
+    
+    event.preventDefault();
+            
+    if(this.evento.acessibilidade == null){
+      this.evento.acessibilidade = false;
+    }
+
+    console.log(this.evento);
+
+    this.service
+    .cadastrar(this.evento)
+    .subscribe(res => {
+        this.mensagem = res;
+    }, erro => console.log(erro));
+
+/*    
+            this.service
+                .cadastra(this.foto)
+                .subscribe(res => {
+                    this.mensagem = res.mensagem;
+                    this.foto = new FotoComponent();
+                    if(!res.inclusao) this.router.navigate([""]);
+                }, erro => console.log(erro));*/
   }
 }

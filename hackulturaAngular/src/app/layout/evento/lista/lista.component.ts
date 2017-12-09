@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { EventoComponent } from '../evento.component';
+import { EventoService } from '../evento.service';
 declare var $:any;
 
 @Component({
@@ -9,18 +10,13 @@ declare var $:any;
 })
 export class ListaComponent implements OnInit {
 
-  eventos : EventoComponent[] = new Array<EventoComponent>();
+  evento: EventoComponent;
+  service: EventoService;
+  eventos : EventoComponent[];
 
-  constructor() { 
-    let a : EventoComponent = new EventoComponent("1", "1", new Date(), "1", "1", 1, true);
-
-    this.eventos.push(a);
-    this.eventos.push(a);
-    this.eventos.push(a);
-    this.eventos.push(a);
-    this.eventos.push(a);
-    this.eventos.push(a);
-    this.eventos.push(a);
+  constructor(service: EventoService) { 
+    this.service = service;
+    this.service.listar().subscribe(eventos => {this.eventos = eventos}, erro => console.log(erro))
   }
 
   ngOnInit() {

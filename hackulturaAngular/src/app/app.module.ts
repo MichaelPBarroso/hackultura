@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './guard/auth.guard';
 import { MaterializeModule } from 'angular2-materialize';
+import "rxjs/add/operator/map";
+import { EventoService } from './layout/evento/evento.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { MaterializeModule } from 'angular2-materialize';
     AppRoutingModule,
     MaterializeModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, EventoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

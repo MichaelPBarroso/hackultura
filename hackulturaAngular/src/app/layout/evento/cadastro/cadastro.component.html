@@ -1,12 +1,12 @@
 <div class="row">
-    <form>
+    <form (submit)="cadastrar($event)">
         <div class="col s12 m5 l4">
             <div class="card">
                 <div class="card-content">
                     <div class="row">
                         <h5 class="text-lighten-3">Cadastrar evento</h5>
                         <div class="input-field col s12">
-                            <input id="nomeEvento" type="text" class="validate">
+                            <input id="nomeEvento" type="text" class="validate" [(ngModel)]="evento.nome" name="nome">
                             <label for="nomeEvento">Nome evento</label>
                         </div>
                         <div class="input-field col s12">
@@ -18,21 +18,21 @@
                             <label>Tipo de local</label>
                         </div>
                         <div class="input-field col s12">
-                            <input id="dataInicioEvento" type="text" class="datepicker">
+                            <input id="dataInicioEvento" type="text" class="datepicker" [(ngModel)]="evento.dataInicioEvento" name="dataInicioEvento">
                             <label for="dataInicioEvento">Data Inicio evento</label>
                         </div>
                         <div class="input-field col s12">
-                            <input id="dataFimEvento" type="text" class="datepicker">
+                            <input id="dataFimEvento" type="text" class="datepicker" [(ngModel)]="evento.dataFimEvento" name="dataFimEvento">
                             <label for="dataFimEvento">Data Fim evento</label>
                         </div>
                         <div class="input-field col s12">
-                            <input id="capacidadeEvento" type="number" class="validate">
+                            <input id="capacidadeEvento" type="number" class="validate" [(ngModel)]="evento.capacidade" name="capacidade">
                             <label for="capacidadeEvento">Capacidade de pessoa</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12">
-                            <input type="checkbox" id="acessibilidadeEvento">
+                            <input type="checkbox" id="acessibilidadeEvento" [(ngModel)]="evento.acessibilidade" name="acessibilidade">
                             <label for="acessibilidadeEvento">Possui acessibilidade</label>
                         </div>
                     </div>

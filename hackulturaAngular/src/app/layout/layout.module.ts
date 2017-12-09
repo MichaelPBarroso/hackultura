@@ -5,7 +5,6 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { NotFoundComponent } from '../not-found/not-found.component';
 import { CadastroComponent } from './evento/cadastro/cadastro.component';
 import { ListaComponent } from './evento/lista/lista.component';
-
 import { AgmCoreModule } from '@agm/core';
 import { FormsModule } from '@angular/forms';
 
@@ -15,7 +14,8 @@ import { FormsModule } from '@angular/forms';
     LayoutRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDg8n1eiXTv1A2azzwTQT2TNPqhvqoTfPg'
-    })
+    }),
+    FormsModule
   ],
   declarations: [
     LayoutComponent,
