@@ -28,6 +28,8 @@ export class CadastroComponent implements OnInit {
 
     $(document).ready(function() {
       $('select').material_select();
+
+      $('.modal').modal();
     });
   }
 }

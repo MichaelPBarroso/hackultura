@@ -1,3 +1,10 @@
-<p>
-  lista works!
-</p>
+<div class="row">
+    <div class="col s10 offset-s1">
+        <ul class="collapsible popout" data-collapsible="accordion" *ngFor="let evento of eventos">
+            <li>
+                <div class="collapsible-header">{{evento.nome}}</div>
+                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventoComponent implements OnInit {
 
-  constructor() { }
+  constructor(nome:string, tipoLocal : string,
+    dataInicioEvento: Date, endereco : string, dataFimEvento : string,
+    capacidade : number, acessibilidade : boolean){
+    this.nome = nome;
+    this.tipoLocal = tipoLocal;
+    this.dataInicioEvento = dataInicioEvento;
+    this.endereco = endereco;
+    this.dataFimEvento = dataFimEvento;
+    this.capacidade = capacidade;
+    this.acessibilidade = acessibilidade; 
+  }
 
   ngOnInit() {
   }
+
+  nome : string;
+  tipoLocal : string;
+  dataInicioEvento: Date;
+  endereco : string;
+  dataFimEvento : string;
+  capacidade : number;
+  acessibilidade : boolean;
 
 }

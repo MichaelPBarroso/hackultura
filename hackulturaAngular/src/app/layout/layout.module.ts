@@ -4,6 +4,7 @@ import { LayoutComponent } from './layout.component';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { NotFoundComponent } from '../not-found/not-found.component';
 import { CadastroComponent } from './evento/cadastro/cadastro.component';
+import { ListaComponent } from './evento/lista/lista.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     LayoutComponent,
     NotFoundComponent,
-    CadastroComponent
+    CadastroComponent,
+    ListaComponent
   ]
 })
 export class LayoutModule { }
