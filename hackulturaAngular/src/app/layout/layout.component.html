@@ -1,2 +1,11 @@
+<nav>
+    <div class="nav-wrapper teal">
+        <a [routerLink]="['/']" class="brand-logo">
+            <img src="assets/images/logo.png" class="responsive-img" alt="logo" id="logoHeader">
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a [routerLink]="['/login']" (click)="onLoggedout()">Log out</a></li>
+        </ul>
+    </div>
+</nav>
 <router-outlet></router-outlet>
-<a [routerLink]="['/login']" (click)="onLoggedout()">Log out</a>

@@ -1,0 +1,109 @@
+<div class="row">
+    <form (submit)="cadastrar($event)">
+        <div class="col s12 m5 l4">
+            <div class="card">
+                <div class="card-content">
+                    <div class="row">
+                        <h5 class="text-lighten-3">Cadastrar evento</h5>
+                        <div class="input-field col s12">
+                            <input id="nomeEvento" type="text" class="validate" [(ngModel)]="evento.nome" name="nome">
+                            <label for="nomeEvento">Nome evento</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Selecione uma opção</option>
+                              <option value="1">Público</option>
+                              <option value="2">Privado</option>
+                            </select>
+                            <label>Tipo de local</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="dataInicioEvento" type="text" class="datepicker" [(ngModel)]="evento.dataInicioEvento" name="dataInicioEvento">
+                            <label for="dataInicioEvento">Data Inicio evento</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="dataFimEvento" type="text" class="datepicker" [(ngModel)]="evento.dataFimEvento" name="dataFimEvento">
+                            <label for="dataFimEvento">Data Fim evento</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="capacidadeEvento" type="number" class="validate" [(ngModel)]="evento.capacidade" name="capacidade">
+                            <label for="capacidadeEvento">Capacidade de pessoa</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <input type="checkbox" id="acessibilidadeEvento" [(ngModel)]="evento.acessibilidade" name="acessibilidade">
+                            <label for="acessibilidadeEvento">Possui acessibilidade</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn right darken-2 modal-trigger" data-target="modal1">Documentação necessária</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn right green">Pesquisar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col s12 m7 l8">
+            <div class="card">
+                <div class="card-content">
+                    <agm-map [latitude]="lat" [longitude]="lng">
+                        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                    </agm-map>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Selecione uma opção</option>
+                              <option value="1">Público</option>
+                              <option value="2">Privado</option>
+                            </select>
+                            <label>Tipo de local</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn right accent-1">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Documentação necessária</h4>
+        <p>Requerimento padrão de Documentos para Uso e Ocupação do Solo, assinado pelo interessado ou seu representante legal;</p>
+        <p>Documentos de identificação do responsável pelo evento;</p>
+        <p>Termo de anuência ou permissão, ou documento equivalente, em se tratando de imóvel de posse ou propriedade da Administração Direta ou Indireta da União, do Estado ou do Município, incluída as concessionárias de serviços públicos e quaisquer outras
+            empresas a elas equiparadas</p>
+        <p>Guia de arrecadação quitada, referente ao preço do serviço público;</p>
+        <p>Memorial descritivo do evento contendo: identificação do objetivo; datas da realização e horários (início e término), público estimado, endereço completo do imóvel ou identificação do logradouro, descrição das estruturas a serem montadas e dos
+            equipamentos a serem instalados e descrição da organização da segurança;</p>
+        <p>Nos casos de eventos a serem realizados em pátio de estacionamento, demonstração de que a utilização da área não interfere nas vagas obrigatórias da edificação;</p>
+        <p>Cópia das peças gráficas descritivas necessárias à perfeita compreensão do pedido de Alvará de Autorização;</p>
+        <p>Cálculo capacidade da lotação ou estimativa de público e das condições de escoamento do público, de acordo com as características do evento, observada a Portaria nº 14/SEHAB-G de 1º de Outubro de 1996 ou norma que venha a sucedê-la; assim como
+            Anexo 17 do Decreto 32.329/92, assinado por profissional habilitado</p>
+        <p>Indicação das providências relativas a sanitários, estacionamentos de veículos e acesso às pessoas portadoras de deficiência ou com mobilidade reduzida e controle de ruídos conforme Lei 13.885/04;</p>
+        <p>Identificação das empresas e profissionais responsáveis pelos projetos, por sua execução e pela organização do evento;</p>
+        <p>Contrato com empresa responsável pela segurança do público durante o evento, devidamente cadastrada junto ao órgão competente;</p>
+        <p>Ofícios protocolado junto a Policia Militar do Estado de São Paulo;</p>
+        <p>Anuências do Centro de Comunicações – CECOM, da Companhia de Engenharia de Tráfego CET;</p>
+        <p>Ofício protocolado junto ao COVISA (Coordenação de Vigilância em Saúde), comunicando o evento, em caso de haver comercialização de alimentos. O atendimento às exigências do Decreto 49.969/08 deverá ser comprovado através de Atestados e/ou Termo
+            de Compromisso Técnico, firmado por empresas ou profissionais devidamente habilitados, acompanhados da respectiva ART – Anotação de Responsabilidade Técnica junto ao CREA/SP , referente a :</p>
+        <p>A critério da Municipalidade, conforme as necessidades do caso, indicação do engenheiro de segurança que deverá estar presente no local por ocasião da realização do evento.</p>
+
+        <p>Cópias do título de propriedade ou comprovante de posse, nos casos em que não haja lançamento fiscal para o lote particular;</p>
+        <p>Contrato de locação, termo de anuência, termo de autorização ou documento equivalente firmado pelo proprietário, ou possuidor do imóvel;</p>
+        <p>Cópia do IPTU, referente ao imóvel em que se pretende instalar a atividade;</p>
+        <p>estabilidade das edificações, instalações e equipamentos, inclusive coberturas, arquibancadas, palcos, torres de equipamentos, painéis, mobiliários, gradis e elementos decorativos;</p>
+        <p>regularidade das instalações elétricas do evento, bem como dos sistemas de aterramento referidos na NBR-5410 e da proteção contra descargas elétricas atmosféricas de acordo com a NBR-5419;</p>
+        <p>adequação e funcionamento do sistema de segurança, incluindo equipamentos e brigada de combate a incêndio e pânico, quanto as condições de operação e funcionabilidade;</p>
+        <p>atendimento a Lei 11.345/93 e à NBR-9050 para os efeitos de aplicação das disposições especiais para pessoas com deficiência ou com mobilidade reduzida, atendimento aos limites de ruído estabelecidos nos Quadros 02/a à 02/h , anexos à Parte III
+            da Lei 13.885/04 e no § 8º do Artigo 177 da Lei 13.885/07 </p>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat">Sair</a>
+    </div>
+</div>
