@@ -13,6 +13,9 @@ export class CadastroComponent implements OnInit {
   ngOnInit() {
   }
 
+  lat: number = -23.5349253;
+  lng: number = -46.6394125;
+
   ngAfterViewInit(){
     $('.datepicker').pickadate({
       selectMonths: true, // Creates a dropdown to control month

@@ -4,18 +4,22 @@ import { LayoutComponent } from './layout.component';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { NotFoundComponent } from '../not-found/not-found.component';
 import { CadastroComponent } from './evento/cadastro/cadastro.component';
-import { MapsComponent } from './maps/maps.component';
+
+import { AgmCoreModule } from '@agm/core';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDg8n1eiXTv1A2azzwTQT2TNPqhvqoTfPg'
+    })
   ],
   declarations: [
     LayoutComponent,
     NotFoundComponent,
-    CadastroComponent,
-    MapsComponent
+    CadastroComponent
   ]
 })
 export class LayoutModule { }
