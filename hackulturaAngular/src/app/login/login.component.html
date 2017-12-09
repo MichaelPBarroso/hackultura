@@ -1,20 +1,31 @@
-<div class="row">
+<div class="row marginTop13">
     <form class="col s6 offset-s3">
         <div class="row">
-            <div class="input-field col s12">
-                <input type="text" class="validate" id="username">
-                <label for="username">User</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input type="password" class="validate" id="password">
-                <label for="password">Password</label>
-            </div>
-        </div>
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-image">
+                        <!-- <img src="assets/images/logo.png"> -->
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="text" class="validate" id="username">
+                                <label for="username">User</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="password" class="validate" id="password">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
 
-        <button class="btn waves-effect waves-light right pulse" type="submit" [routerLink]="['/']" (click)="onLoggedin()" name="signIn">Sign in 
-            <i class="material-icons right">send</i>
-        </button>
+                        <button class="btn waves-effect waves-light right" type="submit" [routerLink]="['/']" (click)="onLoggedin()" name="signIn">Sign in 
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
 </div>
