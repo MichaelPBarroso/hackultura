@@ -16,7 +16,7 @@ export class ListaComponent implements OnInit {
 
   constructor(service: EventoService) { 
     this.service = service;
-    this.service.listar().subscribe(eventos => {this.eventos = eventos}, erro => console.log(erro))
+    this.service.listar().subscribe(eventos => {this.eventos = eventos}, erro => console.log(erro));
   }
 
   ngOnInit() {

@@ -14,11 +14,17 @@ export class EventoComponent implements OnInit {
   }
 
   nome : string;
-  tipoLocal : string;
-  dataInicioEvento: string;
-  endereco : string;
-  dataFimEvento : string;
-  capacidade : number;
-  acessibilidade : boolean;
+  data_inicio: any;
+  endereco_completo : string;
+  data_fim : any;
+  hora_inicio : any;
+  hora_fim : any;
+  publico_estimado : string;
+  objetivo : string;
 
+  /*
+  tipoLocal : any;
+  capacidade : any;
+  acessibilidade : boolean;
+  */
 }

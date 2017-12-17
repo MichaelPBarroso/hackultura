@@ -4,13 +4,30 @@
             <li *ngFor="let evento of eventos">
                 <div class="collapsible-header">{{evento.nome}}</div>
                 <div class="collapsible-body">
-                    <span>{{evento.endereco}}</span>
-                    <span>{{evento.endereco}}</span>
-                    <span>{{evento.capacidade}}</span>
-                    <span>{{evento.tipoLocal}}</span>
-                    <span>{{evento.dataInicioEvento}}</span>
-                    <span>{{evento.dataFimEvento}}</span>
-                    <span>{{evento.acessibilidade}}</span>
+                    <blockquote>
+                        <p>
+                            <label>Endereço Evento: </label>
+                            <span>{{evento.endereco_completo}}</span>
+                        </p>
+                        <p>
+                            <label>Objetivo Evento: </label>
+                            <span>{{evento.objetivo}}</span>
+                        </p>
+                        <p>
+                            <label>Público Estimado Evento: </label>
+                            <span>{{evento.publico_estimado}}</span>
+                        </p>
+                        <p>
+                            <label>Inicio Evento: </label>
+                            <span>{{evento.data_inicio}}</span>
+                            <span>{{evento.hora_inicio}}</span>
+                        </p>
+                        <p>
+                            <label>Fim Evento: </label>
+                            <span>{{evento.data_fim}}</span>
+                            <span>{{evento.hora_fim}}</span>
+                        </p>
+                    </blockquote>
                 </div>
             </li>
         </ul>

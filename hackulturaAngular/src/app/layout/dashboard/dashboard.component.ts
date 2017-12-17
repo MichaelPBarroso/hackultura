@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+declare var $:any;
 
 @Component({
   selector: 'app-dashboard',
@@ -21,8 +22,14 @@ export class DashboardComponent implements OnInit {
         titulo: 'assets/images/slider3.jpg',
         url: '/'
     });*/
-   }
+  }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit(){
+    $(document).ready(function() {
+        $('.modal').modal();
+      });
   }
 }
