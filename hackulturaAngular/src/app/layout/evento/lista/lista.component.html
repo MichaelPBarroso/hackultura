@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col s10 offset-s1">
+        <ul class="collapsible popout" data-collapsible="accordion">
+            <li *ngFor="let evento of eventos">
+                <div class="collapsible-header">{{evento.nome}}</div>
+                <div class="collapsible-body">
+                    <blockquote>
+                        <p>
+                            <label>Endereço Evento: </label>
+                            <span>{{evento.endereco_completo}}</span>
+                        </p>
+                        <p>
+                            <label>Objetivo Evento: </label>
+                            <span>{{evento.objetivo}}</span>
+                        </p>
+                        <p>
+                            <label>Público Estimado Evento: </label>
+                            <span>{{evento.publico_estimado}}</span>
+                        </p>
+                        <p>
+                            <label>Inicio Evento: </label>
+                            <span>{{evento.data_inicio}}</span>
+                            <span>{{evento.hora_inicio}}</span>
+                        </p>
+                        <p>
+                            <label>Fim Evento: </label>
+                            <span>{{evento.data_fim}}</span>
+                            <span>{{evento.hora_fim}}</span>
+                        </p>
+                    </blockquote>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col s3">
+        <a [routerLink]="['/evento']">
+            <div class="card-panel teal">
+                <div class="row"></div>
+                <span class="card-title white-text">Meus eventos</span>
+                <div class="row"></div>
+            </div>
+        </a>
+    </div>
+    <div class="col s3">
+        <a [routerLink]="['/evento/cadastro']">
+            <div class="card-panel teal">
+                <div class="row"></div>
+                <span class="card-title white-text">Cadastrar novo evento</span>
+                <div class="row"></div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large pulse teal darken-3 modal-trigger" data-target="modal1">
+            <i class="large material-icons">priority_high</i>
+        </a>
+    </div>
+</div>
+
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <div class="orange darken-2">
+            <div class="container">
+                <div class="row s12">
+                    <h5 class="white-text center">Tecnologias Utilizadas</h5>
+                </div>
+                <div class="row s12">
+                    <img width="15%" src="https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png">
+                    <img width="15%" src="https://pluralsight.imgix.net/paths/path-icons/angular-14a0f6532f.png">
+                    <img width="12%" src="https://broadwayinfosys.com/uploads/courses/mongodb.png">
+                    <img width="15%" src="https://help.fortrabbit.com/media/mlab-mark.png">
+                    <img width="12%" src="https://git-for-windows.github.io/img/git_logo.png">
+                    <img width="12%" src="https://cdn.worldvectorlogo.com/logos/github-icon.svg">
+                    <img width="14%" src="https://dropboxdeveloperblog.files.wordpress.com/2014/11/heroku-logotype-vertical-purple1.png?w=650">
+                </div>
+            </div>
+            <div class="footer-copyright deep-orange darken-4">
+                <div class="container">
+                    © 2017 Hackultura Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="http://wilker.site">Hackultura_</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat">Sair</a>
+    </div>
+</div>
