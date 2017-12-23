@@ -60,7 +60,8 @@ export class CadastroComponent implements OnInit {
   }
 
   cadastrar(event){
-    
+    Materialize.toast('Efetuando cadastro...', 3000, 'rounded') 
+
     event.preventDefault();
 
     let year_inicio: string = $('#dataInicioEvento').pickadate('picker').get('highlight', 'yyyy');
@@ -78,11 +79,6 @@ export class CadastroComponent implements OnInit {
     this.evento.hora_inicio = $('#horaInicioEvento').val();
     this.evento.hora_fim = $('#horaFimEvento').val();
 
-  /*
-    if(this.evento.acessibilidade == null){
-      this.evento.acessibilidade = false;
-    }
-*/
     console.log(event);
     console.log(this.evento);
 

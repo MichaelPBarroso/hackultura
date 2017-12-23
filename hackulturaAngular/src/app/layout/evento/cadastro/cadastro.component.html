@@ -21,22 +21,6 @@
                             <input id="publicoEstimado" type="number" class="validate" [(ngModel)]="evento.publico_estimado" name="publicoEstimado">
                             <label for="publicoEstimado">Público estimado</label>
                         </div>
-                        <!--<div class="input-field col s12">-->
-                            <!--<select>
-                              <option value="" disabled selected>Selecione uma opção</option>
-                              <option value="1">Público</option>
-                              <option value="2">Privado</option>
-                            </select>-->
-                            <!--
-                            <select [(ngModel)]="evento.tipoLocal">
-                                <option *ngFor="#tipo of listaTipoLocal" [value]="tipo.id">{{tipo.tipo}}</option>
-                            </select>
-                        
-                            <select [(ngModel)]="evento.tipoLocal" [ngModelOptions]="{standalone: true}">
-                                <option *ngFor="let tipo of listaTipoLocal" [ngValue]="tipo" value="{{tipo.tipo}}">{{tipo.tipo}}</option>
-                            </select>
-                            -->
-                        <!--</div>-->
                         <div class="input-field col s6">
                             <input id="dataInicioEvento" type="text" class="datepicker" name="dataInicioEvento">
                             <label for="dataInicioEvento">Data Inicio evento</label>
@@ -53,17 +37,7 @@
                             <input id="horaFimEvento" type="text" class="timepicker" name="horaFimEvento" [(ngModel)]="evento.hora_fim">
                             <label for="horaFimEvento">Hora Final evento</label>
                         </div>
-                        <!--<div class="input-field col s12">
-                            <input id="capacidadeEvento" type="number" class="validate" [(ngModel)]="evento.capacidade" name="capacidade">
-                            <label for="capacidadeEvento">Capacidade de pessoa</label>
-                        </div> -->
                     </div>
-                    <!--<div class="row">
-                        <div class="col s12">
-                            <input type="checkbox" id="acessibilidadeEvento" [(ngModel)]="evento.acessibilidade" name="acessibilidade">
-                            <label for="acessibilidadeEvento">Possui acessibilidade</label>
-                        </div>
-                    </div>-->
                     <div class="row">
                         <button type="button" class="btn right darken-2 modal-trigger" data-target="modal1">Documentação necessária</button>
                     </div>
